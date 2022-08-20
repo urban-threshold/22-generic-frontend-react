@@ -1,0 +1,1 @@
+export const dataURL = process.env.NODE_ENV === 'production' ? 'https://ghapi.handstek.com' : 'http://localhost:8787'

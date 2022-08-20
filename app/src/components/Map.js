@@ -3,7 +3,8 @@ import axios from "axios";
 import hash from 'object-hash';
 import { MapContainer, TileLayer, FeatureGroup, Popup, Circle } from 'react-leaflet';
 import ModalExample from "./Modal";
-const workDevUrl = "http://localhost:8314"
+import { dataURL } from "../config";
+
 
 function Map() {
   const [ferries, setFerries] = React.useState(null);
@@ -16,7 +17,7 @@ function Map() {
   //leaflet, mapbox, open street map, react leaflet
   //example.features[0].geometry.coordinates
   React.useEffect(() => {
-    axios.get(workDevUrl + "/ferries").then((response) => {
+    axios.get(dataURL + "/ferries").then((response) => {
         setFerries(response.data);
     });
     /*axios.get(workDevUrl + "/busstops").then((response) => {
