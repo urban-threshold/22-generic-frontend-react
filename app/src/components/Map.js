@@ -42,23 +42,25 @@ function Map() {
           ferries.features.map((feature,index) => {
             return(
             <FeatureGroup color="purple" key={index}>
-              <Popup>
-                <p>{feature.properties.LGIP_ID}</p>
-                <button
-                  id="button"
-                  className="btn btn-primary"
-                  onClick={() => {
-                    toggle(true);
-                    setSelectedFeature(feature);
-                  }}
-                >
-                  <ModalExample
-                modal={modal}
-                toggle={toggle}
-                selectedFeature={selectedFeature}
-              />
-                </button>
-              </Popup>
+              <div class="flex w-5 h-5">
+                <Popup>
+                  <p>{feature.properties.LGIP_ID}</p>
+                  <button
+                    id="button"
+                    className="btn btn-primary"
+                    onClick={() => {
+                      toggle(true);
+                      setSelectedFeature(feature);
+                    }}
+                  >
+                    <ModalExample
+                  modal={modal}
+                  toggle={toggle}
+                  selectedFeature={selectedFeature}
+                />
+                  </button>
+                </Popup>
+              </div>
               <Circle
                 center={[
                   feature.geometry.coordinates[1],
