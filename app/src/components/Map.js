@@ -43,7 +43,7 @@ function Map() {
             return(
             <FeatureGroup color="purple" key={index}>
               <Popup>
-                <p>{feature.properties.name}</p>
+                <p>{feature.properties.LGIP_ID}</p>
                 <button
                   id="button"
                   className="btn btn-primary"
@@ -52,7 +52,11 @@ function Map() {
                     setSelectedFeature(feature);
                   }}
                 >
-                  stats about environment stuff here
+                  <ModalExample
+                modal={modal}
+                toggle={toggle}
+                selectedFeature={selectedFeature}
+              />
                 </button>
               </Popup>
               <Circle
@@ -67,14 +71,6 @@ function Map() {
                 opacity={1}
                 fillOpacity={0.8}
               />
-            {
-              modal ?
-              <ModalExample
-                modal={modal}
-                toggle={toggle}
-                selectedFeature={selectedFeature}
-              /> : ""
-            }
             </FeatureGroup>
           )
         })
