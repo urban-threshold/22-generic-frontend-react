@@ -32,7 +32,8 @@ function Map() {
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossOrigin=""
       />
-      <MapContainer center={[-32.0, 115.9]} zoom={10} scrollWheelZoom={true}>
+      {/*Below is because the long lat is in the order of lat long in geojson*/}
+      <MapContainer center={[ferries.features[0].geometry.coordinates[1], ferries.features[0].geometry.coordinates[0]]} zoom={10} scrollWheelZoom={true}>
       <TileLayer
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -59,9 +60,9 @@ function Map() {
                   feature.geometry.coordinates[1],
                   feature.geometry.coordinates[0]
                 ]}
-                fillColor="#ff7800"
-                radius={200}
-                color={"#000"}
+                fillColor="#0020ff"
+                radius={50}
+                color={"#0020ff"}
                 weight={1}
                 opacity={1}
                 fillOpacity={0.8}
