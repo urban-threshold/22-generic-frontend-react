@@ -3,16 +3,20 @@ import axios from "axios";
 import hash from 'object-hash';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 
-const workDevUrl = "http://localhost:8787/ferries"
+const workDevUrl = "http://localhost:8787"
 
 function Map() {
-  const [ferries, setFerries] = React.useState()
+  const [ferries, setFerries] = React.useState(null);
+  const [busstops, setbusstops] = React.useState(null);
   //test request
   //leaflet, mapbox, open street map, react leaflet
   //example.features[0].geometry.coordinates
   React.useEffect(() => {
-    axios.get(workDevUrl).then((response) => {
+    axios.get(workDevUrl + "/ferries").then((response) => {
         setFerries(response.data);
+    });
+    axios.get(workDevUrl + "/busstops").then((response) => {
+        setbusstops(response.data);
     });
   }, []);
   if (!ferries) return null;
@@ -29,7 +33,8 @@ function Map() {
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <GeoJSON key={hash(ferries)} data={ferries} />
+        <GeoJSON key={hash(ferries)} data={ferries} />
+        <GeoJSON key={hash(busstops)} data={busstops} />
     </MapContainer>
     </div>
   );
