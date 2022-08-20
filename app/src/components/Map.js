@@ -51,7 +51,7 @@ function Map() {
                     setSelectedFeature(feature);
                   }}
                 >
-                  More Info
+                  stats about environment stuff here
                 </button>
               </Popup>
               <Circle
@@ -66,11 +66,14 @@ function Map() {
                 opacity={1}
                 fillOpacity={0.8}
               />
+            {
+              modal ?
               <ModalExample
                 modal={modal}
                 toggle={toggle}
                 selectedFeature={selectedFeature}
-              />
+              /> : ""
+            }
             </FeatureGroup>
           )
         })

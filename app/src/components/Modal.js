@@ -2,7 +2,7 @@ import React from "react";
 const ModalExample = ({ modal, toggle, selectedFeature }) => {
   return (
     <div>
-        {"modal"}
+        {"stuff"}
     </div>
   );
 };
