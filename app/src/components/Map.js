@@ -39,7 +39,7 @@ function Map() {
       console.log("Fetching ferry ")
       ferries.features.forEach((feature) => {
         axios
-          .get(dataURL + "/bookings/" + feature.properties.LGIP_ID)
+          .get(dataURL + "/booking/" + feature.properties.LGIP_ID)
           .then((response) => {
             updateRating(feature.properties.LGIP_ID, response.data.count);
           });
@@ -93,6 +93,7 @@ function Map() {
                           ? 0
                           : ferryRatings[feature.properties.LGIP_ID]
                       }
+                      updateRating={counter => updateRating(feature.properties.LGIP_ID, counter)}
                     />
                   </button>
                 </Popup>

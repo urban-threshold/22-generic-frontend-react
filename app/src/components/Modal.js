@@ -3,11 +3,12 @@ import React from "react";
 import axios from "axios";
 import { dataURL } from "../config";
 
-const ModalExample = ({ modal, toggle, selectedFeature, carbonRating }) => {
+const ModalExample = ({ modal, toggle, selectedFeature, carbonRating, updateRating }) => {
   const [booked, setBooked] = React.useState(false);
 
   const bookFeature = () => {
     axios.post(dataURL + "/addbooking/" + selectedFeature).then(() => {
+      updateRating(carbonRating+1)
       setBooked(true);
     });
   };
