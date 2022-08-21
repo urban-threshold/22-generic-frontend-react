@@ -31,7 +31,7 @@ export default function IndexPage() {
                                 </button>
                                 <button class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-emerald-400 focus:bg-emerald-50 active:bg-emerald-100">
                                     <div class="relative flex items-center space-x-4 justify-center">
-                                        <a href="https://hackerspace.govhack.org/projects/crtravel" target="_blank" rel="noreferrer">
+                                        <a href="https://hackerspace.govhack.org/projects/cleanroute" target="_blank" rel="noreferrer">
                                             <span class="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-emerald-600 sm:text-base">Project on GovHack Hackerspace</span>
                                         </a>
                                     </div>
@@ -39,7 +39,7 @@ export default function IndexPage() {
                                 <button class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
                                      hover:border-emerald-400 focus:bg-emerald-50 active:bg-emerald-100">
                                     <div class="relative flex items-center space-x-4 justify-center">
-                                        <a href="https://xd.adobe.com/view/2de5b393-3664-4e82-9aa5-06266ca7060c-78b6/?fullscreen" target="_blank" rel="noreferrer">
+                                        <a href="https://xd.adobe.com/view/ca550112-aeb2-4bfa-bcdb-afa4a4374425-9f06/?fullscreen" target="_blank" rel="noreferrer">
                                             <span class="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-emerald-600 sm:text-base">User Interface Mocks</span>
                                         </a>
                                     </div>
@@ -48,7 +48,7 @@ export default function IndexPage() {
                                      hover:border-emerald-400 focus:bg-emerald-50 active:bg-emerald-100">
                                     <div class="relative flex items-center space-x-4 justify-center">
 
-                                        <a href="https://xd.adobe.com/view/81a5f7f0-cdb7-4b10-b2ce-06dc33720cab-d4f6/?fullscreen" target="_blank" rel="noreferrer">
+                                        <a href="https://xd.adobe.com/view/c7366f0c-e2e9-4196-8b23-97e40ab9a9da-9265/?fullscreen" target="_blank" rel="noreferrer">
                                             <span class="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-emerald-600 sm:text-base">Government Portal Mocks</span>
                                         </a></div>
                                 </button>
