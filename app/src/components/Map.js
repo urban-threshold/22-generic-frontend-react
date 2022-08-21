@@ -41,7 +41,7 @@ function Map() {
         axios
           .get(dataURL + "/booking/" + feature.properties.LGIP_ID)
           .then((response) => {
-            updateRating(feature.properties.LGIP_ID, response.data.counter);
+            updateRating(feature.properties.LGIP_ID, response.data.counter < 5 ? response.data.counter : 5);
           });
       });
     }
